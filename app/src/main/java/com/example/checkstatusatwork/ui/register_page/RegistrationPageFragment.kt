@@ -1,4 +1,4 @@
-package com.example.checkstatusatwork.ui
+package com.example.checkstatusatwork.ui.register_page
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

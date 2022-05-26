@@ -1,7 +1,8 @@
-package com.example.checkstatusatwork
+package com.example.checkstatusatwork.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.checkstatusatwork.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

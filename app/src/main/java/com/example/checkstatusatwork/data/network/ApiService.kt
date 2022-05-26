@@ -23,6 +23,9 @@ interface ApiService {
     @POST("users")
     suspend fun register(@Body user: User):User
 
+//    @GET("users/{id}")
+//    suspend fun
+
 //    @GET("movie/popular")
 //    suspend fun getMovies(
 ////        @Query("page")page :Int = 1,

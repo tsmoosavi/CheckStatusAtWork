@@ -1,4 +1,4 @@
-package com.example.checkstatusatwork.ui.home_page
+package com.example.checkstatusatwork.ui.register_page
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

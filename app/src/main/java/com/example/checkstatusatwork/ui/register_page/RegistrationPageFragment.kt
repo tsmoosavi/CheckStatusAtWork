@@ -1,4 +1,4 @@
-package com.example.checkstatusatwork.ui.home_page
+package com.example.checkstatusatwork.ui.register_page
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.example.checkstatusatwork.R
 import com.example.checkstatusatwork.databinding.FragmentRegistrationPageBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -33,10 +34,15 @@ class RegistrationPageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.login.setOnClickListener {
+            findNavController().navigate(R.id.action_registrationPageFragment_to_loginFragment)
+        }
         binding.register.setOnClickListener {
             vModel.addUser(binding.name.text.toString(),binding.password.text.toString().toInt()).observe(viewLifecycleOwner){
                 Toast.makeText(context, it.id, Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_registrationPageFragment_to_homeFragment2)
             }
+
         }
 
     }

@@ -3,7 +3,7 @@ package com.example.checkstatusatwork.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.checkstatusatwork.R
-import com.example.checkstatusatwork.ui.home_page.RegistrationPageViewModel
+import com.example.checkstatusatwork.ui.register_page.RegistrationPageViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {

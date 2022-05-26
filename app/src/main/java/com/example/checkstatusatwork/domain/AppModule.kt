@@ -4,7 +4,7 @@ import com.example.checkstatusatwork.data.User.UserLocalDataSource
 import com.example.checkstatusatwork.data.User.UserRemoteDataSource
 import com.example.checkstatusatwork.data.User.UserRepository
 import com.example.checkstatusatwork.data.network.ApiService
-import com.example.checkstatusatwork.ui.home_page.RegistrationPageViewModel
+import com.example.checkstatusatwork.ui.register_page.RegistrationPageViewModel
 import com.example.checkstatusatwork.ui.login_page.LoginViewModel
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory

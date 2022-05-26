@@ -1,7 +1,6 @@
 package com.example.checkstatusatwork.data.network
 
-import com.example.checkstatusatwork.model.AllUserList
-import com.example.checkstatusatwork.model.UserItem
+import com.example.checkstatusatwork.model.User
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
@@ -22,7 +21,7 @@ private val retrofit = Retrofit.Builder()
 interface ApiService {
 
     @POST("users")
-    suspend fun register(@Body user: UserItem):AllUserList
+    suspend fun register(@Body user: User):User
 
 //    @GET("movie/popular")
 //    suspend fun getMovies(

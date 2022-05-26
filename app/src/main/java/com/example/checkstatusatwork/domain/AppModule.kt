@@ -7,9 +7,12 @@ import com.example.checkstatusatwork.data.network.ApiService
 import com.example.checkstatusatwork.ui.home_page.RegistrationPageViewModel
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
+import retrofit2.converter.moshi.MoshiConverterFactory
 
 val appModule = module {
     single { UserRepository(get(),get()) }
@@ -26,8 +29,14 @@ val appModule = module {
         val moshi = Moshi.Builder()
             .add(KotlinJsonAdapterFactory())
             .build()
+
+        val logger = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BASIC }
+        val client = OkHttpClient.Builder().addInterceptor(logger).build()
+
         val retrofit = Retrofit.Builder()
             .baseUrl("https://6086fa75a3b9c200173b758e.mockapi.io/api/v1/")
+            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .client(client)
             .build()
         retrofit
     }

@@ -23,8 +23,10 @@ interface ApiService {
     @POST("users")
     suspend fun register(@Body user: User):User
 
-//    @GET("users/{id}")
-//    suspend fun
+    @GET("users/{id}")
+    suspend fun getUser(
+        @Path("id") id: String
+    ):User
 
 //    @GET("movie/popular")
 //    suspend fun getMovies(

@@ -10,4 +10,8 @@ class UserRemoteDataSource(val apiService: ApiService) {
        return StatusApi.retrofitService.register(user)
     }
 
+    suspend fun getUser(id:String):User{
+        return StatusApi.retrofitService.getUser(id)
+    }
+
 }

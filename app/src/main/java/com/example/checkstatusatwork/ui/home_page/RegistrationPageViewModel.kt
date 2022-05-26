@@ -1,4 +1,4 @@
-package com.example.checkstatusatwork.ui.register_page
+package com.example.checkstatusatwork.ui.home_page
 
 import androidx.lifecycle.ViewModel
 import com.example.checkstatusatwork.data.User.UserRepository

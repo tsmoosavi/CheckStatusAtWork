@@ -1,4 +1,4 @@
-package com.example.checkstatusatwork.ui.register_page
+package com.example.checkstatusatwork.ui.home_page
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,11 +8,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.checkstatusatwork.R
 import com.example.checkstatusatwork.databinding.FragmentRegistrationPageBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class RegistrationPageFragment : Fragment() {
     lateinit var binding: FragmentRegistrationPageBinding
-
+    val vModel: RegistrationPageViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

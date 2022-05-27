@@ -38,8 +38,8 @@ class RegistrationPageFragment : Fragment() {
             findNavController().navigate(R.id.action_registrationPageFragment_to_loginFragment)
         }
         binding.register.setOnClickListener {
-            vModel.addUser(binding.name.text.toString(),binding.password.text.toString().toInt()).observe(viewLifecycleOwner){
-                Toast.makeText(context, it.id, Toast.LENGTH_SHORT).show()
+            vModel.addUser(binding.name.text.toString(),binding.password.text.toString(),binding.avatarUrl.text.toString(),binding.status.text.toString()).observe(viewLifecycleOwner){
+//                Toast.makeText(context, it.id, Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_registrationPageFragment_to_homeFragment2)
             }
 

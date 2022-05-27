@@ -33,7 +33,8 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.login.setOnClickListener {
-            vm.login(binding.id.text.toString(),binding.password.text.toString().toInt())
+            vm.login(binding.id.text.toString(),binding.password.text.toString())
+
         }
 
         vm.loginSuccess.observe(viewLifecycleOwner){

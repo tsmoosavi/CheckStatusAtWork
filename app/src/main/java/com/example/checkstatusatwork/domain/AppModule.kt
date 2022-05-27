@@ -4,6 +4,7 @@ import com.example.checkstatusatwork.data.User.UserLocalDataSource
 import com.example.checkstatusatwork.data.User.UserRemoteDataSource
 import com.example.checkstatusatwork.data.User.UserRepository
 import com.example.checkstatusatwork.data.network.ApiService
+import com.example.checkstatusatwork.ui.home_page.HomeViewModel
 import com.example.checkstatusatwork.ui.register_page.RegistrationPageViewModel
 import com.example.checkstatusatwork.ui.login_page.LoginViewModel
 import com.squareup.moshi.Moshi
@@ -44,4 +45,5 @@ val appModule = module {
 
     viewModel { RegistrationPageViewModel(get()) }
     viewModel{ LoginViewModel(get())}
+    viewModel{HomeViewModel(get())}
 }

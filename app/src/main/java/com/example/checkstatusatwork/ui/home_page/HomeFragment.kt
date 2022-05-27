@@ -8,11 +8,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.checkstatusatwork.R
 import com.example.checkstatusatwork.databinding.FragmentHomeBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class HomeFragment : Fragment() {
     lateinit var binding:FragmentHomeBinding
-
+    val vm: HomeViewModel by viewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -28,4 +29,13 @@ class HomeFragment : Fragment() {
     }
 
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val adapter = HomeRecyclerAdapter()
+        binding.homeRecycler.adapter = adapter
+
+        vm.userList.observe(viewLifecycleOwner){
+            adapter.submitList(it)
+        }
+    }
 }

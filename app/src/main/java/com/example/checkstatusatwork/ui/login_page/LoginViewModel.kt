@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 class LoginViewModel(val repository: UserRepository): ViewModel() {
      var loginSuccess = MutableLiveData<Boolean>()
 
-    fun login(id:String, password: Int){
+    fun login(id:String, password: String){
         viewModelScope.launch {
             var user = repository.getUser(id)
             loginSuccess.value = user.password == password

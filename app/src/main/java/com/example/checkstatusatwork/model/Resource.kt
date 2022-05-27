@@ -1,6 +1,6 @@
 package com.example.checkstatusatwork.model
 
-data class Resource<T>(val status: Status , val data: T?, val massage:String?)
+data class Resource<T>(var status: Status, var data: T?, var massage:String? = null)
 
 enum class Status{
     LOADING,

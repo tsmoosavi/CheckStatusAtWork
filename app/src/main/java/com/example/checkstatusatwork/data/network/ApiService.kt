@@ -32,40 +32,8 @@ interface ApiService {
     @GET("users")
     suspend fun getUserList():List<User>
 
-
-
-
-
-//    @GET("movie/popular")
-//    suspend fun getMovies(
-////        @Query("page")page :Int = 1,
-//        @Query("api_key") apiKey :String = api_key
-//    ): MovieListApiResult
-//
-//    @GET("search/movie")
-//    suspend fun searchMovie(
-////        @Query("page")page :Int,
-//        @Query("api_key") apiKey :String = api_key,
-//        @Query("query") query: String
-//    ):SearchMovie
-//
-//    @GET("movie/{movie_id}")
-//    suspend fun MovieDetail(
-//        @Path(value = "movie_id") movieId: Int,
-//        @Query("api_key") apiKey :String = api_key
-//    ): MovieDetail
-//
-//    @GET("movie/upcoming")
-//    suspend fun upComingMovies(
-//        @Query("page")page :Int = 1,
-//        @Query("api_key") apiKey :String = api_key
-//    ): UpComingMovieList
-//
-//    @GET("movie/{movie_id}/videos")
-//    suspend fun  videoOfMovie(
-//        @Path(value = "movie_id") movieId: Int,
-//        @Query("api_key") apiKey :String = api_key
-//    ): VideoOfMovie
+    @PUT("users/{id}")
+    suspend fun updateUser (@Body user: User, @Path("id") id : String) //:Unit
 
 
 }

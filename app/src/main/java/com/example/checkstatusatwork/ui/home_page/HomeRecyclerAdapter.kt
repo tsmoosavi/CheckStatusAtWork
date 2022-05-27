@@ -24,6 +24,7 @@ class HomeRecyclerAdapter: ListAdapter<User, HomeRecyclerAdapter.ItemHolder>(Use
     }
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
         holder.binding.name.text = getItem(position).name
+        holder.binding.status.text = getItem(position).status
 
     }
 }

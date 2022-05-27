@@ -26,5 +26,13 @@
     <fragment
         android:id="@+id/homeFragment2"
         android:name="com.example.checkstatusatwork.ui.home_page.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment2_to_profilePageFragment"
+            app:destination="@id/profilePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePageFragment"
+        android:name="com.example.checkstatusatwork.ui.profile.ProfilePageFragment"
+        android:label="ProfilePageFragment" />
 </navigation>

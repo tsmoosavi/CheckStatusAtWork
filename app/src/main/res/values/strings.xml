@@ -10,4 +10,6 @@
     <string name="update_status">update Status</string>
     <string name="edit">edit</string>
     <string name="delete_my_account">delete my account</string>
+    <string name="edit_avatar_url">Edit avatar url:</string>
+    <string name="edit_name">Edit name:</string>
 </resources>

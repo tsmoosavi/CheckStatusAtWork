@@ -38,6 +38,9 @@ class UserRemoteDataSource(val apiService: ApiService) {
     suspend fun getUserList():List<User>{
         return apiService.getUserList()
     }
+    suspend fun updateUser(user: User, id: String){
+        apiService.updateUser(user,id)
+    }
 
 
 }

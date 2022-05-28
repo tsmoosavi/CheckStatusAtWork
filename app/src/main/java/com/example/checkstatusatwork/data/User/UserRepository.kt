@@ -25,4 +25,8 @@ class UserRepository(
     suspend fun getUserList():List<User>{
         return userRemoteDataSource.getUserList()
     }
+
+    suspend fun updateUser(user: User, id: String){
+        userRemoteDataSource.updateUser(user,id)
+    }
 }

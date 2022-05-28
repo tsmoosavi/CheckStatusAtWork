@@ -6,8 +6,12 @@
             name="user"
             type="com.example.checkstatusatwork.model.User" />
     </data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-<LinearLayout
+
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.edit_Page.EditProfilePageFragment"
@@ -15,11 +19,29 @@
     android:padding="10dp">
 
     <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_avatar_url"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/purple_500"
+        android:layout_margin="10dp"/>
     <EditText
         android:id="@+id/editAvatarUrl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@{user.avatar}"
+        android:layout_margin="10dp"
+        android:background="@color/purple_200"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_name"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/purple_500"
         android:layout_margin="10dp"/>
 
     <EditText
@@ -27,7 +49,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@{user.name}"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:background="@color/purple_200"/>
     <Button
         android:id="@+id/editBtn"
         android:layout_width="wrap_content"
@@ -44,4 +67,5 @@
         android:layout_margin="10dp"/>
 
 </LinearLayout>
+</ScrollView>
 </layout>

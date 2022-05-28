@@ -34,5 +34,17 @@
     <fragment
         android:id="@+id/profilePageFragment"
         android:name="com.example.checkstatusatwork.ui.profile.ProfilePageFragment"
-        android:label="ProfilePageFragment" />
+        android:label="ProfilePageFragment" >
+        <action
+            android:id="@+id/action_profilePageFragment_to_editProfilePageFragment"
+            app:destination="@id/editProfilePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfilePageFragment"
+        android:name="com.example.checkstatusatwork.ui.edit_Page.EditProfilePageFragment"
+        android:label="EditProfilePageFragment" >
+        <action
+            android:id="@+id/action_editProfilePageFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
 </navigation>

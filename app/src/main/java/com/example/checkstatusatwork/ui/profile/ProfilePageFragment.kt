@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.checkstatusatwork.R
 import com.example.checkstatusatwork.databinding.FragmentProfilePageBinding
@@ -39,9 +40,13 @@ class ProfilePageFragment : Fragment() {
 //                .into(binding.imageProfile)
 //        }
     binding.user = vm.user
-        Glide.with(this)
-                .load(vm.user.avatar)
-                .placeholder(R.drawable.load)
-                .into(binding.imageProfile)
+    Glide.with(this).load(vm.user.avatar).placeholder(R.drawable.load).into(binding.imageProfile)
+    binding.editProfileBtn.setOnClickListener {
+        findNavController().navigate(R.id.action_profilePageFragment_to_editProfilePageFragment)
     }
+
+
+    }
+
+
 }

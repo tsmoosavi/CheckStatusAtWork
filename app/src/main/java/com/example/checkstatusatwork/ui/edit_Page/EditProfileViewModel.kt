@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 class EditProfileViewModel(val repository: UserRepository): ViewModel()  {
     var user = repository.userInfo
 
-    fun updateUser(name:String,avatar: String, id: String){
+    fun updateUser(name:String,avatar: String){
         viewModelScope.launch {
             repository.updateUser(User(name = name,avatar = avatar,password = user.password,status = user.status),user.id)
         }

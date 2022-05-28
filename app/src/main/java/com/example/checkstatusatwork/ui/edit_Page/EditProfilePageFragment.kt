@@ -35,7 +35,7 @@ class EditProfilePageFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.user = vm.user
         binding.editBtn.setOnClickListener {
-            vm.updateUser(binding.editName.text.toString(),binding.editAvatarUrl.text.toString(),vm.user.id)
+            vm.updateUser(binding.editName.text.toString(),binding.editAvatarUrl.text.toString())
             Toast.makeText(context, "user edited", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_editProfilePageFragment_to_homeFragment2)
         }

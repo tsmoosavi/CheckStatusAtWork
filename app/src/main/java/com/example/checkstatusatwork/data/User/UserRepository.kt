@@ -12,7 +12,8 @@ class UserRepository(
 //    var userInfo = MutableLiveData<User>()
     //TODO check null
     suspend fun addUser(user:User):User?{
-       return userRemoteDataSource.register(user).data!!
+    userInfo = userRemoteDataSource.register(user).data!!
+       return userInfo
 //        return userInfo
 //        return userRemoteDataSource.register(user).data
     }

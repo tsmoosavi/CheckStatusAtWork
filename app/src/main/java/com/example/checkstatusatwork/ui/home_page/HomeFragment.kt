@@ -5,6 +5,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.example.checkstatusatwork.R
 import com.example.checkstatusatwork.databinding.FragmentHomeBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel

@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.checkstatusatwork.R
 import com.example.checkstatusatwork.databinding.UserListItemBinding
 import com.example.checkstatusatwork.model.User
@@ -25,6 +26,9 @@ class HomeRecyclerAdapter: ListAdapter<User, HomeRecyclerAdapter.ItemHolder>(Use
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
         holder.binding.name.text = getItem(position).name
         holder.binding.status.text = getItem(position).status
+        Glide.with(holder.binding.image)
+            .load(getItem(position).avatar)
+            .into(holder.binding.image)
 
     }
 }

@@ -8,4 +8,6 @@
     <string name="profileMenu">Profile</string>
     <string name="edit_profile">edit Profile</string>
     <string name="update_status">update Status</string>
+    <string name="edit">edit</string>
+    <string name="delete_my_account">delete my account</string>
 </resources>

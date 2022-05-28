@@ -7,9 +7,10 @@ import com.example.checkstatusatwork.model.User
 
 class ProfileViewModel(val repository: UserRepository): ViewModel() {
 
-    var user = MutableLiveData<User> ()
-    init {
-        user.value = repository.userInfo
-    }
+    var user = repository.userInfo
+//        MutableLiveData<User> ()
+//    init {
+//        user.value = repository.userInfo
+//    }
 
 }

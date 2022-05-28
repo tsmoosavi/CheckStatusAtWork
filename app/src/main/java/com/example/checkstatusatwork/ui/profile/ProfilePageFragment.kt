@@ -31,13 +31,17 @@ class ProfilePageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        vm.user.observe(viewLifecycleOwner) {
-            binding.user = it
-            Glide.with(this)
-                .load(it.avatar)
+//        vm.user.observe(viewLifecycleOwner) {
+//            binding.user = it
+//            Glide.with(this)
+//                .load(it.avatar)
+//                .placeholder(R.drawable.load)
+//                .into(binding.imageProfile)
+//        }
+    binding.user = vm.user
+        Glide.with(this)
+                .load(vm.user.avatar)
                 .placeholder(R.drawable.load)
                 .into(binding.imageProfile)
-        }
-
     }
 }

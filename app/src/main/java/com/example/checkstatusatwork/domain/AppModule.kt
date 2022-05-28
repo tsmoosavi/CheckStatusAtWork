@@ -4,6 +4,7 @@ import com.example.checkstatusatwork.data.User.UserLocalDataSource
 import com.example.checkstatusatwork.data.User.UserRemoteDataSource
 import com.example.checkstatusatwork.data.User.UserRepository
 import com.example.checkstatusatwork.data.network.ApiService
+import com.example.checkstatusatwork.ui.edit_Page.EditProfileViewModel
 import com.example.checkstatusatwork.ui.home_page.HomeViewModel
 import com.example.checkstatusatwork.ui.register_page.RegistrationPageViewModel
 import com.example.checkstatusatwork.ui.login_page.LoginViewModel
@@ -48,4 +49,5 @@ val appModule = module {
     viewModel{ LoginViewModel(get())}
     viewModel{HomeViewModel(get())}
     viewModel { ProfileViewModel(get()) }
+    viewModel{ EditProfileViewModel(get())}
 }

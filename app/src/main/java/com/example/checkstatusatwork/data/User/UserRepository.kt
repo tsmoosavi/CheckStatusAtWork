@@ -1,5 +1,6 @@
 package com.example.checkstatusatwork.data.User
 
+import androidx.lifecycle.MutableLiveData
 import com.example.checkstatusatwork.model.User
 
 class UserRepository(
@@ -7,15 +8,18 @@ class UserRepository(
     val userLocalDataSource: UserLocalDataSource) {
 
 //     var userInfo:User? = null
+       lateinit var userInfo:User
+//    var userInfo = MutableLiveData<User>()
     //TODO check null
     suspend fun addUser(user:User):User?{
-//        userInfo = userRemoteDataSource.register(user).data
+       return userRemoteDataSource.register(user).data!!
 //        return userInfo
-        return userRemoteDataSource.register(user).data
+//        return userRemoteDataSource.register(user).data
     }
 
     suspend fun getUser(id:String):User{
-        return userRemoteDataSource.getUser(id)
+      userInfo =   userRemoteDataSource.getUser(id)
+        return userInfo
     }
 
     suspend fun getUserList():List<User>{

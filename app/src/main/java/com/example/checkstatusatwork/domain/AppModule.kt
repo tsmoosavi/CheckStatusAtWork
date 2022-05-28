@@ -7,6 +7,7 @@ import com.example.checkstatusatwork.data.network.ApiService
 import com.example.checkstatusatwork.ui.home_page.HomeViewModel
 import com.example.checkstatusatwork.ui.register_page.RegistrationPageViewModel
 import com.example.checkstatusatwork.ui.login_page.LoginViewModel
+import com.example.checkstatusatwork.ui.profile.ProfileViewModel
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -46,4 +47,5 @@ val appModule = module {
     viewModel { RegistrationPageViewModel(get()) }
     viewModel{ LoginViewModel(get())}
     viewModel{HomeViewModel(get())}
+    viewModel { ProfileViewModel(get()) }
 }

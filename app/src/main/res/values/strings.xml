@@ -6,4 +6,6 @@
     <string name="status">status</string>
     <string name="my_status">My Status:</string>
     <string name="profileMenu">Profile</string>
+    <string name="edit_profile">edit Profile</string>
+    <string name="update_status">update Status</string>
 </resources>
